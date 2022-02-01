@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Food Center" EntityNamespace="FoodCenterContext" ContextNamespace="FoodCenterContext" Class="FoodCenterDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="54d050e6-aa3d-4181-a510-00d061920f4c" Provider="Devart.Data.SqlServer.Linq.Provider.SqlDataProvider, Devart.Data.SqlServer.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=DESKTOP-5H6J294;Initial Catalog=&quot;Food Center&quot;;Integrated Security=True;Persist Security Info=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category" ed:Guid="90efca74-7689-487e-9a53-8cadfeb116d7">
+      <Column Name="CategoryId" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="871ba74e-7a3f-4c82-8402-864488c92078" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="2db50877-8e39-4338-9dab-9d800882eeaa" />
+      <Column Name="Category_Description" Member="CategoryDescription" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="1dcceb80-c282-4f0b-aa01-c33434daf9e3" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RefreshToken" Member="RefreshTokens">
+    <Type Name="RefreshToken" ed:Guid="6209f51a-22a2-4a20-bbf9-e2b365b7bb42">
+      <Column Name="RefreshID" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="42916214-7984-4a82-82e6-149a512e6e76" />
+      <Column Name="RToken" Type="System.String" DbType="NVARCHAR(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" Unicode="true" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="2e98941f-bdf4-4ded-ab8f-edf349eea7be" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role" ed:Guid="ca922823-b4c5-4609-aeac-ba85348060c1">
+      <Column Name="Role_Id" Member="RoleId" Type="System.Int32" AutoSync="OnInsert" DbType="INT NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="a7aa9274-1fc1-48c1-91d6-3c2454d2f516" />
+      <Column Name="Role_Name" Member="RoleName" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="27ae8084-428d-4a54-8d89-ce595eafdd36" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sign_Up" Member="SignUps">
+    <Type Name="SignUp" ed:Guid="ab9e2db8-2142-4455-bcb1-87fd343f0f41">
+      <Column Name="Email_Id" Member="EmailId" Type="System.String" DbType="NVARCHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="b81059fe-d22b-462d-9d8a-eb2e5b2c6cc0" />
+      <Column Name="Password" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="da784b48-1e46-4f35-9657-0fb0f9e46919" />
+      <Column Name="Confirm_Password" Member="ConfirmPassword" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ab7abcef-c6e6-4ac4-a903-6cc6210c95a6" />
+      <Column Name="Store_Name" Member="StoreName" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="29fdcfcd-bc05-49be-917f-7385f9a5055f" />
+      <Column Name="Store_Address" Member="StoreAddress" Type="System.String" DbType="NVARCHAR(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="true" ed:Guid="db2b97f4-b33a-4c49-8124-5cb03d160e30" />
+      <Column Name="Store_Emailid" Member="StoreEmailid" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="82ce5d34-4851-430e-8186-2d8f128560dc" />
+      <Column Name="Store_PhoneNo" Member="StorePhoneNo" Type="System.Decimal" DbType="NUMERIC(13) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="13" Scale="0" ed:ValidateRequired="true" ed:Guid="07b4b574-d694-4d7a-9d4c-cd351fa3fd5b" />
+      <Column Name="Store_Alternate_PhoneNo" Member="StoreAlternatePhoneNo" Type="System.Decimal" DbType="NUMERIC(13)" CanBeNull="true" UpdateCheck="Never" Precision="13" Scale="0" ed:ValidateRequired="false" ed:Guid="1f56ad31-1e52-4d89-923a-a0970778a7b3" />
+      <Column Name="Delivery_Radius" Member="DeliveryRadius" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="e8a9c6c6-f4d2-4813-bf23-b7ed8fd49de8" />
+      <Column Name="Store_Logo" Member="StoreLogo" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="beb2b0b3-7e98-489c-b58e-aa71c5f3042c" />
+      <Column Name="Role_Id" Member="RoleId" Type="System.Int32" DbType="INT" CanBeNull="true" UpdateCheck="Never" Precision="10" ed:ValidateRequired="false" ed:Guid="a3faf625-5b2b-4d3b-911a-19f6f1ee93d9" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRefresh" Member="UserRefreshes">
+    <Type Name="UserRefresh" ed:Guid="644f174e-8ec0-4cd0-a8fd-594649a81b37">
+      <Column Name="ID" Type="System.Int32" DbType="INT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="10" ed:ValidateRequired="true" ed:Guid="f2a8a1aa-a843-460e-b833-6ad2f220d8a3" />
+      <Column Name="UserEmailId" Type="System.String" DbType="NVARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="c7c086de-e4bd-42e1-b3b9-a5c45b93241e" />
+      <Column Name="RefreshId" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="10" ed:ValidateRequired="true" ed:Guid="a7f26429-570e-4d21-9d70-a59b79e83a27" />
+    </Type>
+  </Table>
+</Database>
